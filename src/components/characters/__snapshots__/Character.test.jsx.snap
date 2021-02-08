@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Character component renders Character 1`] = `
+<DocumentFragment>
+  <figure>
+    <img
+      src="https://vignette.wikia.nocookie.net/avatar/images/6/6f/Arik.png/revision/latest?cb=20140808184002"
+    />
+    <figcaption>
+      Arik
+    </figcaption>
+  </figure>
+</DocumentFragment>
+`;
