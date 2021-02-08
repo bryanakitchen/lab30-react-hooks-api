@@ -4,13 +4,18 @@ import Character from './Character';
 
 function CharacterList({ characters }) {
     
-  // destructure?
   const characterElements = characters.map(character => {
-    return (
-      <li key={character.id} >
-        <Character name={character.name} url={character.url}/>
-      </li>
-    );
+    if(character.url) 
+
+    {
+      return (
+        <li key={character.id} >
+          <Character name={character.name} url={character.url}/>
+        </li>
+      );
+    }
+
+    return;
   });
 
   return <ul>{characterElements}</ul>;
