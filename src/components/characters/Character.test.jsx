@@ -7,8 +7,8 @@ describe('Character component', () => {
   afterEach(() => cleanup());
   it('renders Character', () => {
     const { asFragment } = render(<Character
-      name='Arik'
-      url='https://vignette.wikia.nocookie.net/avatar/images/6/6f/Arik.png/revision/latest?cb=20140808184002'
+      name="Arik"
+      url="https://vignette.wikia.nocookie.net/avatar/images/6/6f/Arik.png/revision/latest?cb=20140808184002"
     />);    
       
     expect(asFragment()).toMatchSnapshot();
