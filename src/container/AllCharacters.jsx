@@ -11,15 +11,8 @@ const AllCharacters = () => {
     getCharacters().then(newCharacters => setCharacters(newCharacters));
   }, []);
 
-  return (
-    <>
-      <div>
-            Hello from AllCharacters container
-      </div>
-      <CharacterList characters={characters} />
-    </>
-  );
-
+  return <CharacterList characters={characters} />;
+  
 };
 
 export default AllCharacters;
