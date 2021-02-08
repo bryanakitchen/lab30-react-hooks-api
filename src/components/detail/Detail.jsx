@@ -17,8 +17,14 @@ function Detail({ name, url, allies, enemies }) {
         <img src={url} />
         <figcaption>{name}</figcaption>
       </figure>
-      <p>Allies</p>
-      <ul>{allyList}</ul>
+
+      { (allyList > 0) &&
+      <div>
+        <p>Allies</p>
+        <ul>{allyList}</ul>
+      </div>
+      }
+      
       <p>Enemies</p>
       <ul>{enemyList}</ul>
     </>
