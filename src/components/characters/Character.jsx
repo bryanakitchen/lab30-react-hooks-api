@@ -6,7 +6,7 @@ function Character({ name, url }) {
     <>
       <figure>
         <img src={url} />
-        <figcaption>{name}</figcaption>
+        <figcaption >{name}</figcaption>
       </figure>
     </>
   );

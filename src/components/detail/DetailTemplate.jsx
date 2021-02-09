@@ -2,40 +2,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function SingleDetail({ name, photoUrl, allies, enemies }) {
+function DetailTemplate({ name, photoUrl, allies, enemies }) {
 
   const allyElements = allies?.map((ally, i) => {
-    return <li key={i}>{ally}</li>;
+    return <li key={i} style={{ fontWeight: "normal" }}>{ally}</li>;
   });
         
   const enemyElements = enemies?.map((enemy, i) => {
-    return <li key={i}>{enemy}</li>;
+    return <li key={i} style={{ fontWeight: "normal" }}>{enemy}</li>;
   });
 
   return (
     <>
       <figure>
         <img src={photoUrl} />
-        <figcaption>{name}</figcaption>
+        <figcaption style={{ fontSize: "25px" }}>{name}</figcaption>
       </figure>
       
       { (allyElements.length > 0)
-        && <ul>Allies: {allyElements} </ul>
+        && <ul style={{ fontWeight: "bold" }}>Allies: {allyElements} </ul>
       }
 
       { (enemyElements.length > 0)
-        && <ul>Enemies: {enemyElements} </ul>
+        && <ul style={{ fontWeight: "bold" }}>Enemies: {enemyElements} </ul>
       }
     </>
   );
 }
 
-SingleDetail.propTypes = {
+DetailTemplate.propTypes = {
   name: PropTypes.string.isRequired,
   photoUrl: PropTypes.string.isRequired,
   allies: PropTypes.array,
   enemies: PropTypes.array,
 };
 
-export default SingleDetail;
+export default DetailTemplate;
 
