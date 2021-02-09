@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Character from './Character';
+import { Link } from 'react-router-dom';
 
 function CharacterList({ characters }) {
     
@@ -9,16 +10,19 @@ function CharacterList({ characters }) {
 
     {
       return (
-        <li key={character.id} >
-          <Character name={character.name} url={character.url}/>
-        </li>
+        <Link to={`/character/${character.id}`} 
+          style={{ textDecoration: 'none', color: 'green' }}>
+          <li key={character.id} style={{ listStyleType: 'none' }}>
+            <Character name={character.name} url={character.url}/>
+          </li>
+        </Link>
       );
     }
 
     return;
   });
 
-  return <ul>{characterElements}</ul>;
+  return <ul data-testid="characters" >{characterElements}</ul>;
 }
 
 CharacterList.propTypes = {
