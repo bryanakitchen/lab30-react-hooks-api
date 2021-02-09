@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 import DetailTemplate from '../components/detail/DetailTemplate';
 import { getCharacterDetail } from '../services/fetchAPI';
 
-const Detail = () =>  {
+const Detail = ({ match }) =>  {
 
   const [character, setCharacter] = useState({});
   const [loading, setLoading] = useState(true);
 
-  const { id } = useParams();
-
   useEffect(() => {
-    getCharacterDetail(id)
+    getCharacterDetail(match.params.id)
       .then(newCharacter => {
         setCharacter(newCharacter);
         setLoading(false);
@@ -27,6 +25,12 @@ const Detail = () =>  {
   );
 };
 
+Detail.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired
+    }).isRequired
+  }).isRequired
+};
+
 export default Detail;
-
-
