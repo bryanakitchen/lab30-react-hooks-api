@@ -22,7 +22,7 @@ function CharacterList({ characters }) {
     return;
   });
 
-  return <ul>{characterElements}</ul>;
+  return <ul data-testid="characters" >{characterElements}</ul>;
 }
 
 CharacterList.propTypes = {

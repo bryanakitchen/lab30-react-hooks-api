@@ -5,11 +5,18 @@ import { getCharacters } from '../services/fetchAPI';
 
 const AllCharacters = () => {
 
+  const [loading, setLoading] = useState(true);
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    getCharacters().then(newCharacters => setCharacters(newCharacters));
+    getCharacters()
+      .then(newCharacters => {
+        setCharacters(newCharacters);
+        setLoading(false);
+      });
   }, []);
+
+  if(loading) return <h1>Loading...</h1>;
 
   return <CharacterList characters={characters} />;
   

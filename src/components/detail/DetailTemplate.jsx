@@ -5,26 +5,26 @@ import PropTypes from 'prop-types';
 function DetailTemplate({ name, photoUrl, allies, enemies }) {
 
   const allyElements = allies?.map((ally, i) => {
-    return <li key={i} style={{ fontWeight: "normal" }}>{ally}</li>;
+    return <li key={i} style={{ fontWeight: 'normal' }}>{ally}</li>;
   });
         
   const enemyElements = enemies?.map((enemy, i) => {
-    return <li key={i} style={{ fontWeight: "normal" }}>{enemy}</li>;
+    return <li key={i} style={{ fontWeight: 'normal' }}>{enemy}</li>;
   });
 
   return (
     <>
       <figure>
         <img src={photoUrl} />
-        <figcaption style={{ fontSize: "25px" }}>{name}</figcaption>
+        <figcaption data-testid="name" style={{ fontSize: '25px' }}>{name}</figcaption>
       </figure>
       
       { (allyElements.length > 0)
-        && <ul style={{ fontWeight: "bold" }}>Allies: {allyElements} </ul>
+        && <ul style={{ fontWeight: 'bold' }}>Allies: {allyElements} </ul>
       }
 
       { (enemyElements.length > 0)
-        && <ul style={{ fontWeight: "bold" }}>Enemies: {enemyElements} </ul>
+        && <ul style={{ fontWeight: 'bold' }}>Enemies: {enemyElements} </ul>
       }
     </>
   );

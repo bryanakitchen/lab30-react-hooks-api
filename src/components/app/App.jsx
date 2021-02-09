@@ -16,7 +16,6 @@ export default function App() {
         <Route exact path="/character/:id" component={Detail} />
       </Switch>
 
-
     </Router>
   );
 }
