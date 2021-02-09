@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Character from './Character';
+import { Link } from 'react-router-dom';
 
 function CharacterList({ characters }) {
     
@@ -9,9 +10,11 @@ function CharacterList({ characters }) {
 
     {
       return (
-        <li key={character.id} >
-          <Character name={character.name} url={character.url}/>
-        </li>
+        <Link to={`/character/${character.id}`}>
+          <li key={character.id} >
+            <Character name={character.name} url={character.url}/>
+          </li>
+        </Link>
       );
     }
 
