@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AllCharacters from '../../container/AllCharacters';
-import Detail from '../../container/detail/Detail';
+import Detail from '../../container/Detail';
 import Header from '../header/Header';
 
 export default function App() {

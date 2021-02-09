@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import SingleDetail from '../../components/detail/SingleDetail';
-import { getCharacterDetail } from '../../services/fetchAPI';
+import DetailTemplate from '../components/detail/DetailTemplate';
+import { getCharacterDetail } from '../services/fetchAPI';
 
 const Detail = () =>  {
 
@@ -22,7 +22,7 @@ const Detail = () =>  {
 
   return (
     <>
-      <SingleDetail {...character} />
+      <DetailTemplate {...character} />
     </>
   );
 };
