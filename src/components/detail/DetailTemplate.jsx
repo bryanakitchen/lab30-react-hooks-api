@@ -9,7 +9,7 @@ function DetailTemplate({ name, photoUrl, allies, enemies }) {
   });
         
   const enemyElements = enemies?.map((enemy, i) => {
-    return <li key={i} style={{ fontWeight: 'normal' }}>{enemy}</li>;
+    return <li key={(i * Math.random()) } style={{ fontWeight: 'normal' }}>{enemy}</li>;
   });
 
   return (
@@ -19,11 +19,11 @@ function DetailTemplate({ name, photoUrl, allies, enemies }) {
         <figcaption data-testid="name" style={{ fontSize: '25px' }}>{name}</figcaption>
       </figure>
       
-      { (allyElements.length > 0)
+      { (allyElements?.length > 0)
         && <ul style={{ fontWeight: 'bold' }}>Allies: {allyElements} </ul>
       }
 
-      { (enemyElements.length > 0)
+      { (enemyElements?.length > 0)
         && <ul style={{ fontWeight: 'bold' }}>Enemies: {enemyElements} </ul>
       }
     </>

@@ -11,8 +11,9 @@ function CharacterList({ characters }) {
     {
       return (
         <Link to={`/character/${character.id}`} 
+          key={character.id}
           style={{ textDecoration: 'none', color: 'green' }}>
-          <li key={character.id} style={{ listStyleType: 'none' }}>
+          <li style={{ listStyleType: 'none' }}>
             <Character name={character.name} url={character.url}/>
           </li>
         </Link>

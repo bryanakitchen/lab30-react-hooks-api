@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailTemplate component renders DetailTemplate 1`] = `
+<DocumentFragment>
+  <figure>
+    <img
+      src="https://vignette.wikia.nocookie.net/avatar/images/4/45/Baatar_Jr..png/revision/latest?cb=20150409193510"
+    />
+    <figcaption
+      data-testid="name"
+      style="font-size: 25px;"
+    >
+      Baatar Jr.
+    </figcaption>
+  </figure>
+</DocumentFragment>
+`;
